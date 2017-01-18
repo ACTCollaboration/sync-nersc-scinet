@@ -5,21 +5,15 @@
 # removed.
 #DEL_FLAG="--delete"
 
-trim() {
-    local var="$*"
-    var="${var#"${var%%[![:space:]]*}"}"   # remove leading whitespace characters
-    var="${var%"${var##*[![:space:]]}"}"   # remove trailing whitespace characters
-    echo -n "$var"
-}
-
-SCI_SYNC_USER="$(cat scinetUserName)"
+source sync_common.sh
+SCI_SYNC_USER="$(trimWhite $(cat scinetUserName))"
 
 
 while IFS=, read INSRC_DIR INDEST_DIR
 do
 
-    SRC_DIR="$(trim $INSRC_DIR)"
-    DEST_DIR="$(trim $INDEST_DIR)"
+    SRC_DIR="$(trimWhite $INSRC_DIR)"
+    DEST_DIR="$(trimWhite $INDEST_DIR)"
     case "$SRC_DIR" in \#*) continue ;; esac
     if [ -z "$SRC_DIR" ]; then continue ; fi
     if [ -z "$DEST_DIR" ]; then continue ; fi
