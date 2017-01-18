@@ -18,8 +18,7 @@ do
     case "$SRC_DIR" in \#*) continue ;; esac
     if [ -z "$SRC_DIR" ]; then continue ; fi
     if [ -z "$DEST_DIR" ]; then continue ; fi
-    #nohup rsync -azPvL -e "ssh $SCI_SYNC_USER@login.scinet.utoronto.ca ssh " datamover1:$SRC_DIR/ $DEST_DIR $DEL_FLAG > syncScript.log 2>&1 &
-    nohup rsync -azPvL $SCI_SYNC_USER@login.scinet.utoronto.ca:$SRC_DIR/ $DEST_DIR $DEL_FLAG > syncScript.log 2>&1 &
+    nohup rsync -azPvL -e "ssh -A $SCI_SYNC_USER@login.scinet.utoronto.ca ssh -A " datamover1:$SRC_DIR/ $DEST_DIR $DEL_FLAG > syncScript.log 2>&1 &
 
     
 done <$1
