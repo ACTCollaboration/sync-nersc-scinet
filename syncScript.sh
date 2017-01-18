@@ -5,6 +5,7 @@
 # removed.
 #DEL_FLAG="--delete"
 
+cd "$(dirname "$0")"
 source sync_common.sh
 SCI_SYNC_USER="$(trimWhite $(cat scinetUserName))"
 
