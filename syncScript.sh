@@ -19,7 +19,7 @@ do
     if [ -z "$SRC_DIR" ]; then continue ; fi
     if [ -z "$DEST_DIR" ]; then continue ; fi
     #nohup rsync -azPvL -e "ssh $SCI_SYNC_USER@login.scinet.utoronto.ca ssh " datamover1:$SRC_DIR/ $DEST_DIR $DEL_FLAG > syncScript.log 2>&1 &
-    nohup rsync -azPvL ssh $SCI_SYNC_USER@login.scinet.utoronto.ca:$SRC_DIR/ $DEST_DIR $DEL_FLAG > syncScript.log 2>&1 &
+    nohup rsync -azPvL $SCI_SYNC_USER@login.scinet.utoronto.ca:$SRC_DIR/ $DEST_DIR $DEL_FLAG > syncScript.log 2>&1 &
 
     
 done <$1
