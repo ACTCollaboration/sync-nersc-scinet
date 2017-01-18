@@ -1,0 +1,7 @@
+# comma separated source (on scinet) and destination (on nersc/cori) directory paths, no / at end
+# please do not include source paths that are already a child or parent of other source paths
+   # test comment
+paris,london
+#new york,tokyo
+narnia,
+test1,test2

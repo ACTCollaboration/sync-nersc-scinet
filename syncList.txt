@@ -1,0 +1,4 @@
+# comma separated source (on scinet) and destination (on nersc/cori) directory paths, no / at end
+# please do not include source paths that are already a child or parent of other source paths
+
+/project2/r/rbond/saiola/actpol/maps/synced_maps,/project/projectdirs/act/data/synced_maps
