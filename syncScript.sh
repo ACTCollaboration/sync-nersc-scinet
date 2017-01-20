@@ -7,7 +7,7 @@
 
 cd "$(dirname "$0")"
 source sync_common.sh
-SCI_SYNC_USER="$(trimWhite $(cat scinetUserName))"
+SCI_SYNC_USER="$(trimWhite $(cat config/scinetUserName))"
 
 
 while IFS=, read INSRC_DIR INDEST_DIR
@@ -15,9 +15,9 @@ do
 
     SRC_DIR="$(trimWhite $INSRC_DIR)"
     DEST_DIR="$(trimWhite $INDEST_DIR)"
-    case "$SRC_DIR" in \#*) continue ;; esac
-    if [ -z "$SRC_DIR" ]; then continue ; fi
-    if [ -z "$DEST_DIR" ]; then continue ; fi
+    case "$SRC_DIR" in \#*) continue ;; esac  # ignore comments
+    if [ -z "$SRC_DIR" ]; then continue ; fi  # ignore empty
+    if [ -z "$DEST_DIR" ]; then continue ; fi # ignore empty
     nohup rsync -azPvL -e "ssh $SCI_SYNC_USER@login.scinet.utoronto.ca ssh " datamover1:$SRC_DIR/ $DEST_DIR $DEL_FLAG > syncScript.log 2>&1 &
     wait
     
