@@ -18,7 +18,7 @@ do
     case "$SRC_DIR" in \#*) continue ;; esac  # ignore comments
     if [ -z "$SRC_DIR" ]; then continue ; fi  # ignore empty
     if [ -z "$DEST_DIR" ]; then continue ; fi # ignore empty
-    nohup rsync -azPvL -e "ssh $SCI_SYNC_USER@login.scinet.utoronto.ca ssh " datamover1:$SRC_DIR/ $DEST_DIR $DEL_FLAG > syncScript.log 2>&1 &
+    nohup rsync -azPvL -e "ssh $SCI_SYNC_USER@login.scinet.utoronto.ca ssh " datamover1:$SRC_DIR/ $DEST_DIR $DEL_FLAG > rsyncCommand.log 2>&1 &
     wait
     
 done <$1
