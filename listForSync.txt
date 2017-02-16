@@ -2,3 +2,4 @@
 # please do not include source paths that are already a child or parent of other source paths
 
 /project2/r/rbond/saiola/actpol/maps/synced_maps,/project/projectdirs/act/data/synced_maps
+/scratch2/r/rbond/nbatta/MatM,/global/cscratch1/sd/msyriac/ClusterSims
