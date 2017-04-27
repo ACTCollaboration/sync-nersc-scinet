@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # Highly recommended that the following DEL_FLAG flag is kept commented. Only enable it if you are sure
 # that the destination directories on Cori are correct and that no unrelated files will be

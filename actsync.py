@@ -9,6 +9,7 @@ import getpass
 import calendar
 import numpy as np
 import traceback
+import subprocess
 
 
 
@@ -39,7 +40,7 @@ def check_if_time(frequency,trigger_day,time_zone_string,trigger_time,tolerance)
     
 
 class App():
-    def __init__(self,daemon_command,yaml_file,time_interval_sec=60,tolerance_seconds=240):
+    def __init__(self,daemon_command,yaml_file,time_interval_sec=3,tolerance_seconds=240):
         self.dir = os.path.dirname(os.path.abspath(__file__))
         self.stdin_path = '/dev/null'
         self.stdout_path = self.dir+'/syncact_out_'+str(time.time())+".log"
@@ -67,10 +68,10 @@ class App():
                              None,
                              self.settings['time_zone'],
                              self.settings['trigger_time'],
-                             tolerance=self.tolerance) and (now_day!=self.last_day_reminder):
+                             tolerance=self.tolerance) and (now_day!=self.last_day):
                 print("Starting sync...")
-                self.last_day_reminder = dt.datetime.today().day
-                                
+                self.last_day = dt.datetime.today().day
+                subprocess.call("."+self.dir+"/localScript.sh")                                
             
             time.sleep(self.interval)
 

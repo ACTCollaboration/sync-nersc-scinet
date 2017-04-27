@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 cd "$(dirname "$0")"
 source sync_common.sh
