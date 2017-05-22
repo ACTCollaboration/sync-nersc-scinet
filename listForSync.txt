@@ -3,5 +3,4 @@
 
 /project2/r/rbond/saiola/actpol/maps/synced_maps,/project/projectdirs/act/data/synced_maps
 /scratch2/r/rbond/nbatta/MatM,/global/cscratch1/sd/msyriac/ClusterSims
-/home/r/rbond/saiola/map_release/D56_20160624,/project/projectdirs/act/data/synced_maps/D56_20160624
-/home/r/rbond/saiola/map_release/D5_6_20160628,/project/projectdirs/act/data/synced_maps/D5_6_20160628
+/project2/r/rbond/mlungu/actpol/depots/mlungu/Beams,/project/projectdirs/act/data/synced_beams
