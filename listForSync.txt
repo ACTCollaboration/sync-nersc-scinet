@@ -1,7 +1,7 @@
 # comma separated source (on scinet) and destination (on nersc/cori) directory paths, no / at end
 # please do not include source paths that are already a child or parent of other source paths
 
-/project2/r/rbond/saiola/actpol/maps/synced_maps,/project/projectdirs/act/data/synced_maps
+/project/r/rbond/saiola/actpol/maps/synced_maps,/project/projectdirs/act/data/synced_maps
 /scratch2/r/rbond/nbatta/MatM,/global/cscratch1/sd/msyriac/ClusterSims
 /home/r/rbond/saiola/map_release/D56_20160624,/project/projectdirs/act/data/synced_maps/D56_20160624
 /home/r/rbond/saiola/map_release/D5_6_20160628,/project/projectdirs/act/data/synced_maps/D5_6_20160628
