@@ -3,3 +3,6 @@
 
 /project/r/rbond/saiola/actpol/maps/synced_maps,/project/projectdirs/act/data/synced_maps
 /project/r/rbond/mlungu/actpol/depots/mlungu/Beams/,/project/projectdirs/act/data/synced_beams
+/project/r/rbond/sigurdkn/actpol/maps/mr3_20180430/release_reprojected/post_nodown/,/project/projectdirs/act/data/synced_maps/mr3
+/project/r/rbond/sigurdkn/actpol/maps/mr3_20180606/release/debuddy/,/project/projectdirs/act/data/synced_maps/mr3
+/project/r/rbond/sigurdkn/actpol/maps/mr3_20180520/release/debuddy_nodown_post/,/project/projectdirs/act/data/synced_maps/mr3
